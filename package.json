@@ -1,0 +1,112 @@
+{
+  "name": "react-vite-clean-ddd",
+  "description": "This is a React TS template for building a clean DDD UI.",
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "author": "Adelino ARAUJO",
+  "private": true,
+  "version": "1.0.0",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Codalma/react-vite-clean-ddd.git"
+  },
+  "keywords": [
+    "React",
+    "TypeScript",
+    "Clean Architecture",
+    "DDD",
+    "User Interface",
+    "Jest",
+    "ESLint",
+    "Prettier",
+    "React Router",
+    "Environment Variables",
+    "Git Hooks",
+    "Dependency Management",
+    "Continuous Integration",
+    "Containerization",
+    "Docker"
+  ],
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "husky": "husky install",
+    "lint": "eslint ./ --fix",
+    "format": "prettier --write .",
+    "check-types": "tsc --pretty --noEmit",
+    "check-format": "prettier --check .",
+    "check-lint": "eslint . --ext ts --ext tsx --ext js",
+    "check-all": "npm run format && npm run check-lint && npm run check-types && npm run build",
+    "docker:dev": "docker compose -f docker-compose.yml -f docker-compose-dev.yml up",
+    "docker:test": "docker compose -f docker-compose.yml -f docker-compose-test.yml up",
+    "docker:prod": "docker compose -f docker-compose.yml -f docker-compose-prod.yml up",
+    "clean": "rm -rf .coverage/ build/ node_modules/"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-error-boundary": "^4.0.4",
+    "react-router-dom": "^6.11.2",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^29.5.1",
+    "@types/node": "^18.15.11",
+    "@types/react": "^18.0.34",
+    "@types/react-dom": "^18.0.11",
+    "@types/react-router-dom": "^5.3.3",
+    "@typescript-eslint/eslint-plugin": "^5.58.0",
+    "@typescript-eslint/parser": "^5.58.0",
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.14",
+    "cypress": "^12.9.0",
+    "eslint": "^8.38.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-react": "^1.1.7",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-promise": "^6.1.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^29.5.0",
+    "jest-environment-jsdom": "^29.5.0",
+    "postcss": "^8.4.24",
+    "prettier": "^2.8.7",
+    "sass": "^1.62.1",
+    "ts-jest": "^29.1.0",
+    "tsc-alias": "^1.8.6",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "5.0.4",
+    "vite": "^4.3.8",
+    "vite-tsconfig-paths": "^4.2.0"
+  }
+}

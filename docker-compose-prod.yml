@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  web:
+    image: ${PROD_IMAGE_NAME}
+    container_name: ${PROD_CONTAINER_NAME}
+    build:
+      context: .
+      target: prod
+    ports:
+      - ${PROD_PORT}:${PROD_EXPOSED_PORT}
+    environment:
+      - NODE_ENV=production
+    restart: on-failure # Restart the container on failure
+    stop_signal: SIGINT # Signal to send to the container when stopping
+    stop_grace_period: 30s # Time to wait for the container to stop gracefully
+
